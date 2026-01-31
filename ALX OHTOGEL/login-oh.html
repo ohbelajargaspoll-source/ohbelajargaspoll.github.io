@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OHTOGEL - Login</title>
+    <style>
+       
+        body {
+            background-color: #000; 
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: sans-serif;
+        }
+
+        .login-box {
+            width: 350px;
+            padding: 20px;
+            background-color: #000;
+        }
+
+        
+        .input-group {
+            display: flex;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+            border: 1px solid #444;
+        }
+
+        .icon-box {
+            background-color: #333;
+            width: 45px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            border-right: 1px solid #444;
+        }
+
+        input {
+            flex: 1;
+            padding: 12px;
+            border: none;
+            outline: none;
+            background-color: #fff;
+            color: #000;
+            font-weight: bold;
+        }
+
+        
+        .captcha-img {
+            width: 100%;
+            height: 50px;
+            background-color: #1a1a1a;
+            background-image: repeating-linear-gradient(45deg, transparent, transparent 10px, rgba(255,255,255,0.1) 10px, rgba(255,255,255,0.1) 20px);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 10px;
+            border-radius: 5px;
+            border: 1px solid #444;
+            color: #fff;
+            font-style: italic;
+            font-size: 24px;
+            letter-spacing: 15px;
+            font-weight: bold;
+        }
+
+        
+        .remember-me {
+            color: #ccc;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .remember-me input {
+            width: auto;
+            margin-right: 8px;
+        }
+
+        
+        .btn-masuk {
+            width: 100%;
+            padding: 12px;
+            background-color: #e55353; /* Merah seperti contoh */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            margin-bottom: 10px;
+            box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+        }
+
+        
+        .btn-daftar {
+            width: 100%;
+            padding: 12px;
+            background-color: #5bc0de; /* Biru muda seperti contoh */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-weight: bold;
+            cursor: pointer;
+            box-shadow: inset 0 -3px 0 rgba(0,0,0,0.2);
+        }
+
+        button:active {
+            transform: translateY(2px);
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="login-box">
+        <form>
+            <div class="input-group">
+                <div class="icon-box">👤</div>
+                <input type="text" placeholder="Username">
+            </div>
+
+            <div class="input-group">
+                <div class="icon-box">🛡️</div>
+                <input type="password" placeholder="Password">
+            </div>
+
+            <div class="captcha-img">
+                7 E
+            </div>
+
+            <div class="input-group">
+                <div class="icon-box">👥</div>
+                <input type="text" placeholder="Verifikasi">
+            </div>
+
+            <div class="remember-me">
+                <input type="checkbox" checked> Remember Me
+            </div>
+
+            <button type="button" class="btn-masuk">Masuk</button>
+            <button type="button" class="btn-daftar">Daftar Sekarang</button>
+        </form>
+    </div>
+
+</body>
+</html>
