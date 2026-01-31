@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Chat Customer Service</title>
+    <style>
+        body {
+            background-color: #720e0e; 
+            font-family: Arial, sans-serif;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        
+        .chat-container {
+            width: 350px;
+            height: 500px;
+            background-color: #fff;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        
+        .chat-header {
+            background-color: #800000;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        /
+        .chat-messages {
+            flex: 1;
+            padding: 15px;
+            overflow-y: auto;
+            background-color: #f7f7f7;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        
+        .msg-cs {
+            background-color: #e0e0e0;
+            color: #333;
+            padding: 10px;
+            border-radius: 10px 10px 10px 0;
+            align-self: flex-start;
+            max-width: 80%;
+            font-size: 14px;
+        }
+
+        
+        .msg-user {
+            background-color: #800000;
+            color: white;
+            padding: 10px;
+            border-radius: 10px 10px 0 10px;
+            align-self: flex-end;
+            max-width: 80%;
+            font-size: 14px;
+        }
+
+      
+        .chat-input-area {
+            display: flex;
+            padding: 10px;
+            border-top: 1px solid #ddd;
+            background: white;
+        }
+
+        .chat-input-area input {
+            flex: 1;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            outline: none;
+        }
+
+        .chat-input-area button {
+            background-color: #800000;
+            color: white;
+            border: none;
+            padding: 0 15px;
+            margin-left: 5px;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .chat-input-area button:hover {
+            background-color: #a00000;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="chat-container">
+        <div class="chat-header">
+            CUSTOMER SERVICE OHTOGEL
+        </div>
+        
+        <div class="chat-messages" id="chatBox">
+            <div class="msg-cs">
+                Halo! Selamat datang di layanan Live Chat OHTOGEL. Ada yang bisa kami bantu?
+            </div>
+            
+            <div class="msg-user">
+                Saya ingin bertanya tentang RTP Gacor hari ini.
+            </div>
+
+            <div class="msg-cs">
+                Tentu! Silakan cek kolom RTP yang tersedia di halaman utama kami.
+            </div>
+        </div>
+
+        <div class="chat-input-area">
+            <input type="text" id="userInput" placeholder="Tulis pesan Anda...">
+            <button onclick="sendMessage()">Kirim</button>
+        </div>
+    </div>
+
+    <script>
+        function sendMessage() {
+            const input = document.getElementById('userInput');
+            const chatBox = document.getElementById('chatBox');
+
+            if (input.value.trim() !== "") {
+                // Buat elemen pesan baru untuk user
+                const newMessage = document.createElement('div');
+                newMessage.className = 'msg-user';
+                newMessage.textContent = input.value;
+                
+                // Tambahkan ke chat box
+                chatBox.appendChild(newMessage);
+                
+                // Reset input
+                input.value = "";
+                
+                // Scroll otomatis ke bawah
+                chatBox.scrollTop = chatBox.scrollHeight;
+            }
+        }
+    </script>
+
+</body>
+</html>
