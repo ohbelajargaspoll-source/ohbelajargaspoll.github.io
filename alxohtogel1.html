@@ -3428,7 +3428,59 @@
                 </div>
             </div>
         </div>
+        <style>
+ 
+  html, body {
+    cursor: none !important;
+  }
+  a, button, input {
+    cursor: none !important;
+  }
+
+  
+  #lampion-cursor {
+    width: 45px;     height: 45px;
+    position: fixed;
+    pointer-events: none;     z-index: 10000;
+    background-image: url('https://imagekoi.io/images/2026/01/15/kursor.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;   }
+</style>
+
+<div id="lampion-cursor"></div>
+
+<audio id="laguLatar" loop>
+  <source src="https://mahasuhurendikt.com/sound/chinese-sound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const cursorLampion = document.getElementById('lampion-cursor');
+  const lagu = document.getElementById('laguLatar');
+
+  // Fungsi menggerakkan kampion mengikuti mouse
+  document.addEventListener('mousemove', (e) => {
+    cursorLampion.style.left = e.clientX + 'px';
+    cursorLampion.style.top = e.clientY + 'px';
+  });
+
+  // Fungsi memutar musik saat klik pertama kali (Syarat Browser)
+  document.addEventListener('click', () => {
+    if (lagu.paused) {
+      lagu.play().catch(error => console.log("Musik tertunda"));
+    }
+  }, { once: true }); // Hanya jalan satu kali klik saja
+</script>
+
+ </div>
+                </div>
+            </div>
+        </div>
+
+
 </body>
 
 </html>
+
 
