@@ -2620,96 +2620,39 @@ Mengapa Memilih OHTOGEL?</p>
 </div>
 
 <style>
-    /* === Snowfall Overlay Neon Green === */
-    .snow-wrap {
-      position: fixed;
-      inset: 0;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 9999;
-    }
-    
-    /* basic flake */
-    .snowflake {
-      position: absolute;
-      top: -10vh;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: radial-gradient(circle at 30% 30%, #ffe600 0 45%, rgb(255, 238, 0) 55%, rgba(20, 255, 220, 0) 70%);
-      filter: drop-shadow(0 0 10px rgb(255, 153, 0)) blur(0.3px);
-      opacity: .95;
-      animation:
-        fall var(--dur, 12s) linear var(--delay, 0s) infinite,
-        sway var(--sway, 6s) ease-in-out var(--delay, 0s) infinite alternate;
-      will-change: transform;
-    }
-    
-    /* glowing variations */
-    .snowflake.-sm {
-      width: 4px;
-      height: 4px;
-      opacity: .8;
-      filter: drop-shadow(0 0 6px rgba(255, 239, 20, 0.7));
-    }
-    
-    .snowflake.-lg {
-      width: 12px;
-      height: 12px;
-      opacity: .9;
-      filter: drop-shadow(0 0 15px rgba(239, 255, 20, 0.7));
-    }
-    
-    /* motion */
-    @keyframes fall {
-      to {
-        transform: translate3d(var(--drift, 0px), 110vh, 0) rotate(var(--rot, 180deg));
-      }
-    }
-    @keyframes sway {
-      from { margin-left: -10px; }
-      to   { margin-left: 10px; }
-    }
-    
-    /* gentle glow animation for more life */
-    @keyframes glow {
-      0%, 100% { filter: drop-shadow(0 0 6px rgba(255, 239, 20, 0.8)); }
-      50% { filter: drop-shadow(0 0 15px rgba(255, 231, 20, 0.7)); }
-    }
-    .snowflake { animation: glow 2s ease-in-out infinite alternate, fall var(--dur,12s) linear var(--delay,0s) infinite, sway var(--sway,6s) ease-in-out var(--delay,0s) infinite alternate; }
-    
-    /* optional: prefers-reduced-motion */
-    @media (prefers-reduced-motion: reduce) {
-      .snowflake { animation: none; }
-    }
-    </style>
-    
-    <div class="snow-wrap" id="snow"><span class="snowflake -lg" style="left: 39.3532vw; --delay: -11.49s; --dur: 11.99s; --sway: 9.96s; --drift: 3.1px; --rot: 29deg;"></span><span class="snowflake " style="left: 41.3834vw; --delay: -1.37s; --dur: 17.73s; --sway: 6.74s; --drift: -21.9px; --rot: 331deg;"></span><span class="snowflake -sm" style="left: 84.7139vw; --delay: -6.05s; --dur: 12.73s; --sway: 6.42s; --drift: -38.4px; --rot: 6deg;"></span><span class="snowflake -sm" style="left: 63.8663vw; --delay: -8.27s; --dur: 8.21s; --sway: 9.00s; --drift: 58.3px; --rot: 113deg;"></span><span class="snowflake " style="left: 65.8214vw; --delay: -11.81s; --dur: 12.50s; --sway: 9.82s; --drift: 39.9px; --rot: 191deg;"></span><span class="snowflake -sm" style="left: 65.7722vw; --delay: -10.51s; --dur: 15.20s; --sway: 8.72s; --drift: -7.1px; --rot: 243deg;"></span><span class="snowflake -lg" style="left: 83.9884vw; --delay: -9.50s; --dur: 14.93s; --sway: 9.33s; --drift: -54.5px; --rot: 123deg;"></span><span class="snowflake -sm" style="left: 19.434vw; --delay: -7.22s; --dur: 14.82s; --sway: 9.39s; --drift: 10.9px; --rot: 205deg;"></span><span class="snowflake " style="left: 61.2243vw; --delay: -10.55s; --dur: 14.50s; --sway: 4.33s; --drift: -42.8px; --rot: 286deg;"></span><span class="snowflake " style="left: 60.4318vw; --delay: -7.65s; --dur: 10.58s; --sway: 9.01s; --drift: 57.6px; --rot: 317deg;"></span><span class="snowflake -lg" style="left: 45.9989vw; --delay: -6.78s; --dur: 15.46s; --sway: 9.77s; --drift: 20.6px; --rot: 336deg;"></span><span class="snowflake " style="left: 69.3523vw; --delay: -2.33s; --dur: 13.94s; --sway: 6.01s; --drift: -30.3px; --rot: 25deg;"></span><span class="snowflake " style="left: 3.79203vw; --delay: -10.83s; --dur: 10.17s; --sway: 8.39s; --drift: -5.5px; --rot: 279deg;"></span><span class="snowflake -lg" style="left: 21.5935vw; --delay: -9.88s; --dur: 14.24s; --sway: 6.86s; --drift: 40.9px; --rot: 4deg;"></span><span class="snowflake -lg" style="left: 66.4028vw; --delay: -9.03s; --dur: 12.17s; --sway: 8.64s; --drift: 36.8px; --rot: 328deg;"></span><span class="snowflake -sm" style="left: 41.25vw; --delay: -9.29s; --dur: 13.84s; --sway: 4.38s; --drift: 46.9px; --rot: 193deg;"></span><span class="snowflake -sm" style="left: 72.4761vw; --delay: -9.33s; --dur: 17.52s; --sway: 9.71s; --drift: 26.2px; --rot: 358deg;"></span><span class="snowflake -sm" style="left: 70.7184vw; --delay: -11.35s; --dur: 8.09s; --sway: 6.32s; --drift: 39.3px; --rot: 38deg;"></span><span class="snowflake -lg" style="left: 50.9174vw; --delay: -8.66s; --dur: 15.28s; --sway: 8.99s; --drift: -14.5px; --rot: 249deg;"></span><span class="snowflake -sm" style="left: 64.0885vw; --delay: -7.73s; --dur: 10.18s; --sway: 6.74s; --drift: -40.6px; --rot: 282deg;"></span><span class="snowflake " style="left: 75.7762vw; --delay: -2.51s; --dur: 15.37s; --sway: 5.44s; --drift: -10.0px; --rot: 310deg;"></span><span class="snowflake " style="left: 64.4569vw; --delay: -4.05s; --dur: 12.53s; --sway: 4.35s; --drift: -22.6px; --rot: 351deg;"></span><span class="snowflake " style="left: 87.05vw; --delay: -6.76s; --dur: 9.62s; --sway: 4.47s; --drift: 22.7px; --rot: 346deg;"></span><span class="snowflake " style="left: 81.8479vw; --delay: -11.46s; --dur: 16.68s; --sway: 4.07s; --drift: 48.5px; --rot: 286deg;"></span><span class="snowflake -sm" style="left: 90.7079vw; --delay: -7.47s; --dur: 12.27s; --sway: 8.36s; --drift: 25.1px; --rot: 248deg;"></span><span class="snowflake -sm" style="left: 50.3825vw; --delay: -0.81s; --dur: 14.66s; --sway: 7.50s; --drift: 20.4px; --rot: 251deg;"></span><span class="snowflake -sm" style="left: 82.8206vw; --delay: -6.53s; --dur: 13.35s; --sway: 9.05s; --drift: -52.8px; --rot: 195deg;"></span><span class="snowflake -sm" style="left: 82.7092vw; --delay: -4.82s; --dur: 11.17s; --sway: 9.15s; --drift: 16.5px; --rot: 169deg;"></span><span class="snowflake -lg" style="left: 18.8706vw; --delay: -5.08s; --dur: 17.28s; --sway: 7.50s; --drift: -1.0px; --rot: 79deg;"></span><span class="snowflake -sm" style="left: 22.928vw; --delay: -7.35s; --dur: 15.24s; --sway: 9.04s; --drift: -11.1px; --rot: 127deg;"></span><span class="snowflake -sm" style="left: 31.9691vw; --delay: -3.28s; --dur: 10.74s; --sway: 5.57s; --drift: 2.0px; --rot: 301deg;"></span><span class="snowflake -lg" style="left: 14.7807vw; --delay: -3.03s; --dur: 9.34s; --sway: 5.55s; --drift: 41.5px; --rot: 117deg;"></span><span class="snowflake -sm" style="left: 51.6018vw; --delay: -7.41s; --dur: 13.53s; --sway: 4.45s; --drift: -29.7px; --rot: 226deg;"></span><span class="snowflake " style="left: 36.8868vw; --delay: -10.43s; --dur: 16.54s; --sway: 8.71s; --drift: 51.5px; --rot: 32deg;"></span><span class="snowflake -sm" style="left: 26.3429vw; --delay: -6.05s; --dur: 13.60s; --sway: 8.97s; --drift: 32.2px; --rot: 195deg;"></span><span class="snowflake -sm" style="left: 39.1974vw; --delay: -10.60s; --dur: 10.02s; --sway: 9.36s; --drift: 8.4px; --rot: 163deg;"></span><span class="snowflake -sm" style="left: 10.0067vw; --delay: -6.12s; --dur: 8.59s; --sway: 6.96s; --drift: 32.9px; --rot: 109deg;"></span><span class="snowflake -sm" style="left: 45.3411vw; --delay: -7.47s; --dur: 9.55s; --sway: 9.61s; --drift: -16.2px; --rot: 220deg;"></span><span class="snowflake -lg" style="left: 99.1278vw; --delay: -9.30s; --dur: 13.56s; --sway: 7.77s; --drift: 14.2px; --rot: 165deg;"></span><span class="snowflake -sm" style="left: 40.7401vw; --delay: -2.99s; --dur: 13.08s; --sway: 8.89s; --drift: -1.4px; --rot: 109deg;"></span><span class="snowflake -sm" style="left: 49.2743vw; --delay: -0.95s; --dur: 13.46s; --sway: 9.08s; --drift: 15.0px; --rot: 131deg;"></span><span class="snowflake -lg" style="left: 47.3967vw; --delay: -7.00s; --dur: 15.71s; --sway: 8.18s; --drift: -44.7px; --rot: 145deg;"></span><span class="snowflake -sm" style="left: 35.483vw; --delay: -5.03s; --dur: 16.62s; --sway: 6.37s; --drift: 36.1px; --rot: 255deg;"></span><span class="snowflake -lg" style="left: 94.7625vw; --delay: -7.82s; --dur: 14.17s; --sway: 8.35s; --drift: -10.0px; --rot: 101deg;"></span><span class="snowflake -sm" style="left: 14.2444vw; --delay: -5.55s; --dur: 12.05s; --sway: 9.58s; --drift: 2.4px; --rot: 124deg;"></span><span class="snowflake -sm" style="left: 0.43411vw; --delay: -1.37s; --dur: 10.48s; --sway: 7.68s; --drift: 10.1px; --rot: 55deg;"></span><span class="snowflake -sm" style="left: 83.2869vw; --delay: -11.62s; --dur: 8.96s; --sway: 4.39s; --drift: 0.5px; --rot: 1deg;"></span><span class="snowflake -sm" style="left: 28.7795vw; --delay: -10.92s; --dur: 16.97s; --sway: 8.07s; --drift: 31.5px; --rot: 88deg;"></span><span class="snowflake " style="left: 23.1699vw; --delay: -3.30s; --dur: 14.20s; --sway: 6.09s; --drift: -20.1px; --rot: 43deg;"></span><span class="snowflake -sm" style="left: 74.0081vw; --delay: -9.49s; --dur: 13.33s; --sway: 5.79s; --drift: 37.7px; --rot: 73deg;"></span><span class="snowflake " style="left: 39.9151vw; --delay: -11.93s; --dur: 13.26s; --sway: 4.49s; --drift: 36.7px; --rot: 295deg;"></span><span class="snowflake -sm" style="left: 97.2937vw; --delay: -5.48s; --dur: 11.18s; --sway: 9.52s; --drift: 28.8px; --rot: 26deg;"></span><span class="snowflake -sm" style="left: 47.3333vw; --delay: -4.85s; --dur: 9.80s; --sway: 4.10s; --drift: 42.1px; --rot: 205deg;"></span><span class="snowflake " style="left: 2.07437vw; --delay: -9.99s; --dur: 17.85s; --sway: 5.88s; --drift: -7.8px; --rot: 337deg;"></span><span class="snowflake " style="left: 45.0322vw; --delay: -11.64s; --dur: 16.33s; --sway: 7.19s; --drift: 24.8px; --rot: 106deg;"></span><span class="snowflake " style="left: 72.0369vw; --delay: -9.43s; --dur: 12.41s; --sway: 8.05s; --drift: -55.1px; --rot: 302deg;"></span><span class="snowflake " style="left: 88.8778vw; --delay: -0.55s; --dur: 11.43s; --sway: 7.69s; --drift: -30.8px; --rot: 70deg;"></span><span class="snowflake " style="left: 89.8821vw; --delay: -7.09s; --dur: 13.70s; --sway: 5.51s; --drift: 41.7px; --rot: 220deg;"></span><span class="snowflake " style="left: 5.4922vw; --delay: -1.72s; --dur: 15.95s; --sway: 9.11s; --drift: 18.0px; --rot: 218deg;"></span><span class="snowflake -sm" style="left: 83.4629vw; --delay: -11.76s; --dur: 16.80s; --sway: 5.06s; --drift: -4.8px; --rot: 203deg;"></span><span class="snowflake " style="left: 67.1676vw; --delay: -11.20s; --dur: 11.31s; --sway: 7.72s; --drift: 23.2px; --rot: 70deg;"></span><span class="snowflake -sm" style="left: 24.7146vw; --delay: -0.83s; --dur: 14.86s; --sway: 8.80s; --drift: -55.4px; --rot: 325deg;"></span><span class="snowflake " style="left: 45.4244vw; --delay: -9.30s; --dur: 8.09s; --sway: 5.30s; --drift: 38.8px; --rot: 225deg;"></span><span class="snowflake " style="left: 1.09436vw; --delay: -0.47s; --dur: 14.64s; --sway: 8.51s; --drift: -9.9px; --rot: 278deg;"></span><span class="snowflake " style="left: 53.2037vw; --delay: -3.92s; --dur: 12.13s; --sway: 8.65s; --drift: 10.0px; --rot: 23deg;"></span><span class="snowflake -sm" style="left: 94.253vw; --delay: -6.55s; --dur: 15.25s; --sway: 8.66s; --drift: 54.2px; --rot: 343deg;"></span><span class="snowflake " style="left: 87.3662vw; --delay: -5.09s; --dur: 15.07s; --sway: 9.68s; --drift: -58.9px; --rot: 139deg;"></span><span class="snowflake -sm" style="left: 6.80998vw; --delay: -6.11s; --dur: 15.21s; --sway: 8.37s; --drift: 39.9px; --rot: 136deg;"></span><span class="snowflake " style="left: 8.73798vw; --delay: -7.69s; --dur: 14.44s; --sway: 5.31s; --drift: -5.2px; --rot: 58deg;"></span><span class="snowflake " style="left: 93.5815vw; --delay: -9.09s; --dur: 10.09s; --sway: 8.42s; --drift: -31.2px; --rot: 150deg;"></span><span class="snowflake -sm" style="left: 68.8077vw; --delay: -7.73s; --dur: 11.37s; --sway: 6.72s; --drift: -53.1px; --rot: 112deg;"></span><span class="snowflake -sm" style="left: 90.012vw; --delay: -10.45s; --dur: 13.64s; --sway: 4.97s; --drift: -50.6px; --rot: 248deg;"></span><span class="snowflake -sm" style="left: 93.2639vw; --delay: -9.82s; --dur: 17.55s; --sway: 9.21s; --drift: -58.6px; --rot: 325deg;"></span><span class="snowflake -sm" style="left: 11.5775vw; --delay: -10.88s; --dur: 14.22s; --sway: 6.56s; --drift: 27.3px; --rot: 255deg;"></span><span class="snowflake " style="left: 23.9585vw; --delay: -6.05s; --dur: 8.67s; --sway: 8.00s; --drift: 10.0px; --rot: 241deg;"></span><span class="snowflake " style="left: 24.0521vw; --delay: -9.94s; --dur: 13.44s; --sway: 7.21s; --drift: 41.0px; --rot: 22deg;"></span><span class="snowflake " style="left: 11.537vw; --delay: -9.93s; --dur: 12.01s; --sway: 5.90s; --drift: 43.0px; --rot: 230deg;"></span><span class="snowflake -sm" style="left: 18.8706vw; --delay: -5.08s; --dur: 17.28s; --sway: 7.50s; --drift: -1.0px; --rot: 79deg;"></span><span class="snowflake -sm" style="left: 22.928vw; --delay: -7.35s; --dur: 15.24s; --sway: 9.04s; --drift: -11.1px; --rot: 127deg;"></span><span class="snowflake -sm" style="left: 31.9691vw; --delay: -3.28s; --dur: 10.74s; --sway: 5.57s; --drift: 2.0px; --rot: 301deg;"></span><span class="snowflake -lg" style="left: 14.7807vw; --delay: -3.03s; --dur: 9.34s; --sway: 5.55s; --drift: 41.5px; --rot: 117deg;"></span><span class="snowflake -sm" style="left: 51.6018vw; --delay: -7.41s; --dur: 13.53s; --sway: 4.45s; --drift: -29.7px; --rot: 226deg;"></span><span class="snowflake " style="left: 36.8868vw; --delay: -10.43s; --dur: 16.54s; --sway: 8.71s; --drift: 51.5px; --rot: 32deg;"></span><span class="snowflake -sm" style="left: 26.3429vw; --delay: -6.05s; --dur: 13.60s; --sway: 8.97s; --drift: 32.2px; --rot: 195deg;"></span><span class="snowflake -sm" style="left: 39.1974vw; --delay: -10.60s; --dur: 10.02s; --sway: 9.36s; --drift: 8.4px; --rot: 163deg;"></span><span class="snowflake -sm" style="left: 10.0067vw; --delay: -6.12s; --dur: 8.59s; --sway: 6.96s; --drift: 32.9px; --rot: 109deg;"></span><span class="snowflake -sm" style="left: 45.3411vw; --delay: -7.47s; --dur: 9.55s; --sway: 9.61s; --drift: -16.2px; --rot: 220deg;"></span><span class="snowflake -lg" style="left: 99.1278vw; --delay: -9.30s; --dur: 13.56s; --sway: 7.77s; --drift: 14.2px; --rot: 165deg;"></span><span class="snowflake -sm" style="left: 40.7401vw; --delay: -2.99s; --dur: 13.08s; --sway: 8.89s; --drift: -1.4px; --rot: 109deg;"></span><span class="snowflake -sm" style="left: 49.2743vw; --delay: -0.95s; --dur: 13.46s; --sway: 9.08s; --drift: 15.0px; --rot: 131deg;"></span><span class="snowflake -lg" style="left: 47.3967vw; --delay: -7.00s; --dur: 15.71s; --sway: 8.18s; --drift: -44.7px; --rot: 145deg;"></span><span class="snowflake -sm" style="left: 35.483vw; --delay: -5.03s; --dur: 16.62s; --sway: 6.37s; --drift: 36.1px; --rot: 255deg;"></span><span class="snowflake -lg" style="left: 94.7625vw; --delay: -7.82s; --dur: 14.17s; --sway: 8.35s; --drift: -10.0px; --rot: 101deg;"></span><span class="snowflake -sm" style="left: 14.2444vw; --delay: -5.55s; --dur: 12.05s; --sway: 9.58s; --drift: 2.4px; --rot: 124deg;"></span><span class="snowflake -sm" style="left: 0.43411vw; --delay: -1.37s; --dur: 10.48s; --sway: 7.68s; --drift: 10.1px; --rot: 55deg;"></span><span class="snowflake -sm" style="left: 83.2869vw; --delay: -11.62s; --dur: 8.96s; --sway: 4.39s; --drift: 0.5px; --rot: 1deg;"></span><span class="snowflake -sm" style="left: 28.7795vw; --delay: -10.92s; --dur: 16.97s; --sway: 8.07s; --drift: 31.5px; --rot: 88deg;"></span><span class="snowflake " style="left: 23.1699vw; --delay: -3.30s; --dur: 14.20s; --sway: 6.09s; --drift: -20.1px; --rot: 43deg;"></span><span class="snowflake -sm" style="left: 74.0081vw; --delay: -9.49s; --dur: 13.33s; --sway: 5.79s; --drift: 37.7px; --rot: 73deg;"></span><span class="snowflake " style="left: 39.0734vw; --delay: -1.08s; --dur: 17.41s; --sway: 8.56s; --drift: 32.2px; --rot: 99deg;"></span></div>
-    
-    <!-- auto-generate snow -->
-    <script>
-    (function(){
-      const wrap = document.getElementById('snow');
-      const COUNT = 50; // jumlah serpihan
-      for(let i=0; i<COUNT; i++){
-        const f = document.createElement('span');
-        f.className = 'snowflake ' + (Math.random()<.2?'-lg':(Math.random()<.6?'-sm':''));
-        const left = Math.random()*100;
-        const delay = (Math.random()*-12).toFixed(2)+'s';
-        const dur = (8 + Math.random()*10).toFixed(2)+'s';
-        const sway = (4 + Math.random()*6).toFixed(2)+'s';
-        const drift = (Math.random()*120 - 60).toFixed(1)+'px';
-        const rot = (Math.random()*360).toFixed(0)+'deg';
-        f.style.left = left+'vw';
-        f.style.setProperty('--delay', delay);
-        f.style.setProperty('--dur', dur);
-        f.style.setProperty('--sway', sway);
-        f.style.setProperty('--drift', drift);
-        f.style.setProperty('--rot', rot);
-        wrap.appendChild(f);
-      }
-    })();
-    </script>
+/* customizable snowflake styling */
+.snowflake {
+  color: #fff;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  text-shadow: 0 0 5px #000;
+}
+
+@-webkit-keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@-webkit-keyframes snowflakes-shake{0%,100%{-webkit-transform:translateX(0);transform:translateX(0)}50%{-webkit-transform:translateX(80px);transform:translateX(80px)}}@keyframes snowflakes-fall{0%{top:-10%}100%{top:100%}}@keyframes snowflakes-shake{0%,100%{transform:translateX(0)}50%{transform:translateX(80px)}}.snowflake{position:fixed;top:-10%;z-index:9999;-webkit-user-select:none;-moz-user-select:none;-ms-user-select:none;user-select:none;cursor:default;-webkit-animation-name:snowflakes-fall,snowflakes-shake;-webkit-animation-duration:10s,3s;-webkit-animation-timing-function:linear,ease-in-out;-webkit-animation-iteration-count:infinite,infinite;-webkit-animation-play-state:running,running;animation-name:snowflakes-fall,snowflakes-shake;animation-duration:10s,3s;animation-timing-function:linear,ease-in-out;animation-iteration-count:infinite,infinite;animation-play-state:running,running}.snowflake:nth-of-type(0){left:1%;-webkit-animation-delay:0s,0s;animation-delay:0s,0s}.snowflake:nth-of-type(1){left:10%;-webkit-animation-delay:1s,1s;animation-delay:1s,1s}.snowflake:nth-of-type(2){left:20%;-webkit-animation-delay:6s,.5s;animation-delay:6s,.5s}.snowflake:nth-of-type(3){left:30%;-webkit-animation-delay:4s,2s;animation-delay:4s,2s}.snowflake:nth-of-type(4){left:40%;-webkit-animation-delay:2s,2s;animation-delay:2s,2s}.snowflake:nth-of-type(5){left:50%;-webkit-animation-delay:8s,3s;animation-delay:8s,3s}.snowflake:nth-of-type(6){left:60%;-webkit-animation-delay:6s,2s;animation-delay:6s,2s}.snowflake:nth-of-type(7){left:70%;-webkit-animation-delay:2.5s,1s;animation-delay:2.5s,1s}.snowflake:nth-of-type(8){left:80%;-webkit-animation-delay:1s,0s;animation-delay:1s,0s}.snowflake:nth-of-type(9){left:90%;-webkit-animation-delay:3s,1.5s;animation-delay:3s,1.5s}.snowflake:nth-of-type(10){left:25%;-webkit-animation-delay:2s,0s;animation-delay:2s,0s}.snowflake:nth-of-type(11){left:65%;-webkit-animation-delay:4s,2.5s;animation-delay:4s,2.5s}
+</style>
+<div class="snowflakes" aria-hidden="true">
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/money.png" height="40px" width="40px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/orange.png" height="50px" width="50px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/lampionn.png" height="40px" width="40px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/kipass.png" height="50px" width="50px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/kuda.png" height="50px" width="50px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/ingot.png" height="40px" width="40px;">
+</div>
+<div class="snowflake">
+<img src="https://photoku.io/images/2026/01/15/angpao.png" height="40px" width="40px;">
+</div>
+</div>
 
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"3ef176a026a544e4bc647e3e4780bb1d","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
 <script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"8845c7607fc9481facfe9e6735f44ad1","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
@@ -2782,5 +2725,6 @@ Mengapa Memilih OHTOGEL?</p>
 	
 	
 	</body></html>
+
 
 
