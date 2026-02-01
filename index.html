@@ -2723,5 +2723,64 @@ Mengapa Memilih OHTOGEL?</p>
 
 <div id="privacy-settings-manager-load-complete" style="display: none;"></div><div id="footer-script-loaded" style="display: none;"></div><div id="privacy-settings-manager-load-complete" style="display: none;"></div><div id="footer-script-loaded" style="display: none;"></div>
 <div id="privacy-settings-manager-load-complete" style="display: none;"></div><div id="footer-script-loaded" style="display: none;"></div><div id="privacy-settings-manager-load-complete" style="display: none;"></div><div id="footer-script-loaded" style="display: none;"></div><script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"4c8acc39a363453b9617edb5e682dc46","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
-</body></html>
+
+	   </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+<style>
+ 
+  html, body {
+    cursor: none !important;
+  }
+  a, button, input {
+    cursor: none !important;
+  }
+
+  
+  #lampion-cursor {
+    width: 45px;     height: 45px;
+    position: fixed;
+    pointer-events: none;     z-index: 10000;
+    background-image: url('https://imagekoi.io/images/2026/01/15/kursor.webp');
+    background-size: contain;
+    background-repeat: no-repeat;
+    transform: translate(-50%, -50%);
+    transition: transform 0.1s ease-out;   }
+</style>
+
+<div id="lampion-cursor"></div>
+
+<audio id="laguLatar" loop>
+  <source src="https://mahasuhurendikt.com/sound/chinese-sound.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+  const cursorLampion = document.getElementById('lampion-cursor');
+  const lagu = document.getElementById('laguLatar');
+
+  // Fungsi menggerakkan kampion mengikuti mouse
+  document.addEventListener('mousemove', (e) => {
+    cursorLampion.style.left = e.clientX + 'px';
+    cursorLampion.style.top = e.clientY + 'px';
+  });
+
+  // Fungsi memutar musik saat klik pertama kali (Syarat Browser)
+  document.addEventListener('click', () => {
+    if (lagu.paused) {
+      lagu.play().catch(error => console.log("Musik tertunda"));
+    }
+  }, { once: true }); // Hanya jalan satu kali klik saja
+</script>
+
+ </div>
+                </div>
+            </div>
+        </div>
+
+	
+	
+	</body></html>
+
 
